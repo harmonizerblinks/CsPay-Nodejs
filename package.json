@@ -1,0 +1,38 @@
+{
+  "name": "cross-switch",
+  "version": "1.0.0",
+  "description": "Cross-Switch Ghana API wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha ./test/*.js --reporter spec --timeout 10000"
+  },
+  "keywords": [
+    "payment",
+    "API",
+    "Ghana",
+    "Payment",
+    "Cashout",
+    "Payment API",
+    "Cross-Switch",
+    "Cross Switch Ghana"
+  ],
+  "author": "Harmony Alabi <harmonizerblinks@gmail.com> (https://www.linkedin.com/in/harmony-alabi)",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "promise": "^7.1.1",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harmonizerblinks/cross-switch-ghana.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harmonizerblinks/cross-switch-ghana/issues"
+  },
+  "homepage": "https://github.com/harmonizerblinks/cross-switch-ghana"
+}
