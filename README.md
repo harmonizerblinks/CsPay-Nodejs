@@ -4,12 +4,12 @@
 
 Nodejs API wrapper for [Cross-Switch Ghana](https://docs.cross-switch.app).
 
-# [![NPM](https://nodei.co/npm/cross-switch.png)](https://nodei.co/npm/cross-switch/)
+# [![NPM](https://nodei.co/npm/cross-switch-gh.png)](https://nodei.co/npm/cross-switch-gh/)
 
 ### Installation
 
 ```
-npm install cross-switch
+npm install cross-switch-gh
 ```
 
 ### Usaged
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === 'production') {
 	live = true;
 }
 // Require the library
-var cross_switch = require('cross-switch')(process.env.APP_ID, process.env.APP_KEY, live);
+var cross_switch = require('cross-switch-gh')(process.env.APP_ID, process.env.APP_KEY, live);
 
 
 ```
@@ -59,89 +59,89 @@ For all resource methods, the JSON body can be passed as the argument.
 Method to Initiation Sending or Receiving from mobile Money.
 
 ```js
-	cross_switch.payment.createPayment({
-		type: 'Receive || Send',
-		name: 'Harmony Alabi',
-		mobile: '+233540000000',
-		mobile_network: 'MTN',
-		email: 'harmony@cross-switch.com',
-		currency: 'GHS',
-		amount: 0.1,
-		order_id: `${Math.ceil(Math.random() * 10e8)}`,
-		order_desc: 'Testing',
-		account: '',
-		signature: '',
-		callback: ''
-	}).then((body)=> {
-		console.log(body);
-	}).catch((error)=> {
-		console.log(error);
-	});
+cross_switch.payment.createPayment({
+	type: 'Receive || Send',
+	name: 'Firstname Lastname',
+	mobile: '+233540000000',
+	mobile_network: 'MTN || AIRTEL || TIGO || VODAFONE',
+	email: 'harmony@cross-switch.com',
+	currency: 'GHS',
+	amount: 0.1,
+	order_id: `${Math.ceil(Math.random() * 10e8)}`,
+	order_desc: 'Testing',
+	account: '',
+	signature: '',
+	callback: ''
+}).then((body)=> {
+	console.log(body);
+}).catch((error)=> {
+	console.log(error);
+});
 ```
 
 Method to Initiation Only Receiving from mobile Money.
 
 ```js
-	cross_switch.payment.Collection({
-		name: 'Harmony Alabi',
-		mobile: '+233546467407',
-		mobile_network: 'MTN',
-		email: 'harmony@icloud.com',
-		currency: 'GHS',
-		amount: 0.1,
-		order_id: `${Math.ceil(Math.random() * 10e8)}`,
-		order_desc: 'Testing',
-		account: '',
-		signature: '',
-		callback: ''
-	}).then((body)=> {
-		console.log(body);
-	}).catch((error)=> {
-		console.log(error);
-	});;
+cross_switch.payment.Collection({
+	name: 'Firstname Lastname',
+	mobile: '+233540000000',
+	mobile_network: 'MTN || AIRTEL || TIGO || VODAFONE',
+	email: 'harmony@icloud.com',
+	currency: 'GHS',
+	amount: 0.1,
+	order_id: `${Math.ceil(Math.random() * 10e8)}`,
+	order_desc: 'Testing',
+	account: '',
+	signature: '',
+	callback: ''
+}).then((body)=> {
+	console.log(body);
+}).catch((error)=> {
+	console.log(error);
+});;
 ```
 
 Method to Initiation Only Receiving from mobile Money.
 
 ```js
-	cross_switch.payment.Cashout({
-		name: 'Harmony Alabi',
-		mobile: '+233546467407',
-		mobile_network: 'MTN',
-		email: 'harmony@icloud.com',
-		currency: 'GHS',
-		amount: 0.1,
-		order_id: `${Math.ceil(Math.random() * 10e8)}`,
-		order_desc: 'Testing',
-	}).then((body)=> {
-		console.log(body);
-	}).catch((error)=> {
-		console.log(error);
-	});
+cross_switch.payment.Cashout({
+	name: 'Firstname Lastname',
+	mobile: '+233540000000',
+	mobile_network: 'MTN || AIRTEL || TIGO || VODAFONE',
+	email: 'harmony@icloud.com',
+	currency: 'GHS',
+	amount: 1,
+	order_id: `${Math.ceil(Math.random() * 10e8)}`,
+	order_desc: 'Testing',
+}).then((body)=> {
+	console.log(body);
+}).catch((error)=> {
+	console.log(error);
+});
 ```
 
 
 Method to Get Cashout Balance.
 
 ```js
-	cross_switch.payment.getBalance({})
-	.then((body)=> {
-		console.log(body);
-	}).catch((error)=> {
-		console.log(error);
-	});
+cross_switch.payment.getBalance({})
+.then((body)=> {
+	console.log(body);
+}).catch((error)=> {
+	console.log(error);
+});
 ```
 
 Method to Verify Transaction status.
 
 ```js
-	cross_switch.payment.verifyPayment({
-		order_id: `${data.transaction_no}`,
-	}).then((body)=> {
-		console.log(body);
-	}).catch((error)=> {
-		console.log(error);
-	});
+cross_switch.payment.verifyPayment({
+	order_id: `${data.transaction_no}`,
+}).then((body)=> {
+	console.log(body);
+}).catch((error)=> {
+	console.log(error);
+});
 ```
   
 
