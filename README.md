@@ -1,4 +1,8 @@
-## Cross-Switch Ghana ![Build status](https://travis-ci.org/theslyone/node-cross-switch.svg?branch=master)
+## Cross-Switch Ghana ![Build status](https://github.com/harmonizerblinks/cross-switchd/actions/workflows/main.yml/badge.svg)
+
+# Issues ![Issues](https://img.shields.io/github/issues/harmonizerblinks/Cross-Switch-Ghana)
+# Star ![Star](https://img.shields.io/github/stars/harmonizerblinks/Cross-Switch-Ghana)
+# License ![Issues](	https://img.shields.io/github/license/harmonizerblinks/Cross-Switch-Ghana)
 
 Nodejs API wrapper for [Cross-Switch Ghana](https://docs.cross-switch.app).
 
@@ -8,7 +12,7 @@ Nodejs API wrapper for [Cross-Switch Ghana](https://docs.cross-switch.app).
 npm install cross-switch
 ```
 
-### Usage
+### Usaged
 
 ```js
 
