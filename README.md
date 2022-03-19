@@ -1,8 +1,6 @@
 ## Cross-Switch Ghana 
 
-# Issues ![Issues](https://img.shields.io/github/issues/harmonizerblinks/Cross-Switch-Ghana)
-# Star ![Star](https://img.shields.io/github/stars/harmonizerblinks/Cross-Switch-Ghana)
-# License ![Issues](	https://img.shields.io/github/license/harmonizerblinks/Cross-Switch-Ghana)
+# ![Issues](https://img.shields.io/github/issues/harmonizerblinks/Cross-Switch-Ghana) ![Star](https://img.shields.io/github/stars/harmonizerblinks/Cross-Switch-Ghana) ![Issues](https://img.shields.io/github/license/harmonizerblinks/Cross-Switch-Ghana)
 
 Nodejs API wrapper for [Cross-Switch Ghana](https://docs.cross-switch.app).
 
