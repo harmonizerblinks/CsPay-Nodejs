@@ -11,8 +11,8 @@ describe("Cross-Switch Payment", function() {
   it("should initialize a Collection/ Cashout Payment", function(done) {
     cross_switch.payment.createPayment({
         type: 'Receive',
-        name: 'Harmony Alabi',
-        mobile: '+233546467407',
+        name: 'Plugin Test',
+        mobile: '+233549444056',
         mobile_network: 'MTN',
         email: 'harmony@icloud.com',
         currency: 'GHS',
@@ -41,8 +41,8 @@ describe("Cross-Switch Payment", function() {
   // Create Collection Transaction
   it("should trizzer a Collection request", function(done) {
     cross_switch.payment.Collection({
-        name: 'Harmony Alabi',
-        mobile: '+233546467407',
+        name: 'Plugin Test',
+        mobile: '+233549444056',
         mobile_network: 'MTN',
         email: 'harmony@icloud.com',
         currency: 'GHS',
@@ -69,8 +69,8 @@ describe("Cross-Switch Payment", function() {
   // Create Cashout Transaction
   it("should trizzer a cashout request", function(done) {
     cross_switch.payment.Cashout({
-        name: 'Harmony Alabi',
-        mobile: '+233546467407',
+        name: 'Plugin Test',
+        mobile: '+233549444056',
         mobile_network: 'MTN',
         email: 'harmony@icloud.com',
         currency: 'GHS',
@@ -125,21 +125,6 @@ describe("Cross-Switch Payment", function() {
     });
   });
 
-  // Fetch Transaction
-  // No transaction id :/
-  /*
-  it("should get details of a transaction", function(done) {
-    paystack.transaction.get(transaction_id, function(error, body) {
-
-      if (error)
-        return done(error);
-
-      expect(body).to.have.property('data');
-
-      done();
-    });
-  });
-  //*/
 
   // List Transactions
   // it("should list transaction", function(done) {
@@ -148,18 +133,6 @@ describe("Cross-Switch Payment", function() {
   //     expect(body).to.have.property('data');
   //     expect(body.data).to.be.instanceof(Array);
 
-  //     done();
-  //   })
-  //   .catch(function(error){
-  //     return done(error);
-  //   });
-  // });
-
-  // Export Transactions
-  // it("should export transaction", function(done) {
-  //   paystack.transaction.export()
-  //   .then(function(body){
-  //     expect(body).to.have.property('data');
   //     done();
   //   })
   //   .catch(function(error){
