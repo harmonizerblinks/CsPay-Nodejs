@@ -1,10 +1,12 @@
-## Cross-Switch Ghana ![Build status](https://github.com/harmonizerblinks/cross-switchd/actions/workflows/npm-publish.yml/badge.svg)
+## Cross-Switch Ghana 
 
 # Issues ![Issues](https://img.shields.io/github/issues/harmonizerblinks/Cross-Switch-Ghana)
 # Star ![Star](https://img.shields.io/github/stars/harmonizerblinks/Cross-Switch-Ghana)
 # License ![Issues](	https://img.shields.io/github/license/harmonizerblinks/Cross-Switch-Ghana)
 
 Nodejs API wrapper for [Cross-Switch Ghana](https://docs.cross-switch.app).
+
+# [![NPM](https://nodei.co/npm/cross-switch.png)](https://nodei.co/npm/cross-switch/)
 
 ### Installation
 
@@ -53,7 +55,6 @@ For all resource methods, the JSON body can be passed as the argument.
   - Cashout
   - getBalance
   - verifyPayment
-  - Ota
 - sms 
   - Coming soon
 
