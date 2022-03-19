@@ -1,4 +1,4 @@
-## Cross-Switch Ghana ![Build status](https://github.com/harmonizerblinks/cross-switchd/actions/workflows/main.yml/badge.svg)
+## Cross-Switch Ghana ![Build status](https://github.com/harmonizerblinks/cross-switchd/actions/workflows/travis.yml/badge.svg?branch=main)
 
 # Issues ![Issues](https://img.shields.io/github/issues/harmonizerblinks/Cross-Switch-Ghana)
 # Star ![Star](https://img.shields.io/github/stars/harmonizerblinks/Cross-Switch-Ghana)
