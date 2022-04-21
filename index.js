@@ -15,6 +15,7 @@ var
 var resources = {
   // sms: require('./resources/sms'),
   payment: require('./resources/payment'),
+  customer: require('./resources/customer'),
 }
 
 function Cross_Switch(app_id,app_key,live=false) {
@@ -23,7 +24,7 @@ function Cross_Switch(app_id,app_key,live=false) {
   }
   if(live) root = 'https://app.alias-solutions.net:5002';
   
-  console.log(app_id,app_key,root);
+  // console.log(app_id,app_key,root);
 
   this.app_id = app_id;
   this.app_key = app_key;
@@ -114,7 +115,7 @@ Cross_Switch.prototype = {
         if (method == 'post' || method == 'put') {
           // Body
           body = args[0];
-          console.log(self.app_id, self.app_key);
+          // console.log(self.app_id, self.app_key);
           body.app_id = self.app_id;
           body.app_key = self.app_key;
         }

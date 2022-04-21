@@ -10,7 +10,7 @@ module.exports = {
   createPayment: {
       method: 'post',
       endpoint: [root, '/CreatePayment'].join(''),
-      params: ['type*','name*','email*','mobile*', 'mobile_network*', 'amount*', 'currency*', 'order_id*', 'order_desc*', 'signature', 'callback']
+      params: ['type*','name*','email*','mobile*', 'mobile_network*', 'amount*', 'currency*', 'order_id*', 'order_desc*', 'callback']
     },
 
 
@@ -20,7 +20,7 @@ module.exports = {
   Collection: {
     method: 'post',
     endpoint: [root, '/CreatePaymentTrans'].join(''),
-    params: ['name*','email*','mobile*', 'mobile_network*', 'amount*', 'currency*', 'order_id*', 'order_desc*', 'signature', 'callback']
+    params: ['name*','email*','mobile*', 'mobile_network*', 'amount*', 'currency*', 'order_id*', 'order_desc*', 'callback']
   },
 
 
@@ -60,5 +60,23 @@ module.exports = {
       endpoint: [root, '/Payments'].join(''),
       params: ['page', 'per_page', 'account', 'tranid']
     },
+
+  /*
+  Create Customer 
+  */
+  CreateCustomer: {
+    method: 'post',
+    endpoint: [root, '/CreateCustomer'].join(''),
+    params: ['code','name*','email*','mobile*', 'other*', 'amount*', 'currency*', 'order_id*', 'order_desc*', 'signature', 'callback']
+  },
+
+  /*
+  Get Customer 
+  */
+  GetCustomer: {
+    method: 'post',
+    endpoint: [root, '/GetCustomer'].join(''),
+    params: ['mobile*']
+  },
 
 };
