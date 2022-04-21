@@ -73,6 +73,7 @@ cross_switch.payment.createPayment({
 	order_id: `${Math.ceil(Math.random() * 10e8)}`,
 	order_desc: 'Testing',
 	account: '',
+	customerid: '',
 	callback: ''
 }).then((body)=> {
 	console.log(body);
@@ -94,7 +95,6 @@ cross_switch.payment.Collection({
 	order_id: `${Math.ceil(Math.random() * 10e8)}`,
 	order_desc: 'Testing',
 	account: '',
-	signature: '',
 	callback: ''
 }).then((body)=> {
 	console.log(body);

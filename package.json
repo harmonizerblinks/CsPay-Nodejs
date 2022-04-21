@@ -1,6 +1,6 @@
 {
   "name": "cross-switch-gh",
-  "version": "0.0.2-beta",
+  "version": "0.0.2-beta-1",
   "description": "Cross-Switch Ghana API wrapper",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,9 @@
     "Cashout",
     "Payment API",
     "Cross-Switch",
-    "Cross Switch Ghana"
+    "Cross Switch Ghana",
+    "Sms API",
+    "USSD API"
   ],
   "author": "Harmony Alabi <harmonizerblinks@gmail.com> (https://www.linkedin.com/in/harmony-alabi)",
   "license": "MIT",
