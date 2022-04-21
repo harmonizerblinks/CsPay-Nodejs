@@ -9,17 +9,12 @@ describe("Cross-Switch Customer", function() {
 
   // Create Customer
   it("should Create Customer", function(done) {
-    cross_switch.customer.CreateCustomer({
+    cross_switch.customer.createCustomer({
+        code: `${Math.ceil(Math.random() * 10e8)}`,
         name: 'Plugin Test',
         mobile: '+233549444056',
-        mobile_network: 'MTN',
         email: 'harmony@icloud.com',
-        currency: 'GHS',
-        amount: 0.1,
-        order_id: `${Math.ceil(Math.random() * 10e8)}`,
-        order_desc: 'Testing',
-        signature: '',
-        callback: ''
+        other: 'Ghana',
       })
       .then(function(body){
         // console.log(body, 'Payment');
@@ -36,9 +31,9 @@ describe("Cross-Switch Customer", function() {
 
   // Get Customer By Code or Mobile
   it("should Get Existing Customer", function(done) {
-    cross_switch.customer.GetCustomer({mobile: code})
+    cross_switch.customer.getCustomer({mobile: mobile})
     .then(function(body){
-      console.log(body, 'Verify');
+      console.log(body, 'Get Customer');
       expect(body).to.have.property('status_code');
       expect(body).to.have.property('status_message');
       expect(body).to.have.property('data');

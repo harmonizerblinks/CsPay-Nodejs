@@ -53,6 +53,9 @@ For all resource methods, the JSON body can be passed as the argument.
   - Cashout
   - getBalance
   - verifyPayment
+- customer
+  - createCustomer
+  - getCustomer
 - sms 
   - Coming soon
 

@@ -7,7 +7,7 @@ module.exports = {
   /*
   Create Customer 
   */
-  CreateCustomer: {
+  createCustomer: {
     method: 'post',
     endpoint: [root, '/CreateCustomer'].join(''),
     params: ['code','name*','email','mobile*', 'other', 'date']
@@ -16,7 +16,7 @@ module.exports = {
   /*
   Get Customer 
   */
-  GetCustomer: {
+  getCustomer: {
     method: 'post',
     endpoint: [root, '/GetCustomer'].join(''),
     params: ['mobile*']
