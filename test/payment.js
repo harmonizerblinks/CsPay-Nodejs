@@ -22,7 +22,7 @@ describe("Cross-Switch Payment", function() {
         signature: '',
         callback: ''
       })
-      .then(function(body){
+      .then((body)=>{
         // console.log(body, 'Payment');
         expect(body).to.have.property('status_code');
         expect(body).to.have.property('status_message');
@@ -32,14 +32,14 @@ describe("Cross-Switch Payment", function() {
         reference = body.interpaytxnref;
         done();
       })
-      .catch(function(error){
+      .catch((error)=>{
         return done(error);
       });
   });
 
 
   // Create Collection Transaction
-  it("should trizzer a Collection request", function(done) {
+  it("should trizzer a Collection request", (done)=> {
     cross_switch.payment.Collection({
         name: 'Plugin Test',
         mobile: '+233549444056',
@@ -67,7 +67,7 @@ describe("Cross-Switch Payment", function() {
   });
 
   // Create Cashout Transaction
-  it("should trizzer a cashout request", function(done) {
+  it("should trizzer a cashout request", (done)=> {
     cross_switch.payment.Cashout({
         name: 'Plugin Test',
         mobile: '+233549444056',
@@ -78,7 +78,7 @@ describe("Cross-Switch Payment", function() {
         order_id: `${Math.ceil(Math.random() * 10e8)}`,
         order_desc: 'Testing',
       })
-      .then(function(body){
+      .then((body)=>{
         // console.log(body, 'Cashout');
         expect(body).to.have.property('status_code');
         expect(body).to.have.property('status_message');
@@ -88,30 +88,30 @@ describe("Cross-Switch Payment", function() {
         reference = body.interpaytxnref;
         done();
       })
-      .catch(function(error){
+      .catch((error)=>{
         return done(error);
       });
   });
 
   // Balance Enquiry 
-  it("should Get merchant Cashout Balance", function(done) {
+  it("should Get merchant Cashout Balance", (done)=> {
     cross_switch.payment.getBalance({})
-    .then(function(body){
+    .then((body)=>{
       // console.log(body, 'Balance');
       expect(body).to.have.property('status_code');
       expect(body).to.have.property('status_message');
       expect(body).to.have.property('available_balance');
       done();
     })
-    .catch(function(error){
+    .catch((error)=>{
       return done(error);
     });
   });
 
   // Verify Transaction
-  it("should verify a transaction", function(done) {
+  it("should verify a transaction", (done)=> {
     cross_switch.payment.verifyPayment({order_id: reference})
-    .then(function(body){
+    .then((body)=>{
       console.log(body, 'Verify');
       expect(body).to.have.property('status_code');
       expect(body).to.have.property('status_message');
@@ -120,7 +120,7 @@ describe("Cross-Switch Payment", function() {
       expect(body).to.have.property('interpaytxnref');
       done();
     })
-    .catch(function(error){
+    .catch((error)=>{
       return done(error);
     });
   });
