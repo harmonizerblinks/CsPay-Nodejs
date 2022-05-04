@@ -13,7 +13,7 @@ var
 // console.log(process.env);
 
 var resources = {
-  // sms: require('./resources/sms'),
+  sms: require('./resources/sms'),
   payment: require('./resources/payment'),
   customer: require('./resources/customer'),
 }

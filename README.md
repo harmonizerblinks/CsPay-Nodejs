@@ -56,8 +56,19 @@ For all resource methods, the JSON body can be passed as the argument.
 - customer
   - createCustomer
   - getCustomer
+  - getCustomerBill - Coming soon
 - sms 
-  - Coming soon
+  - sendSms
+  - sendOtp
+  - verifyOtp
+- Bill 
+  - createBill - Coming soon
+  - getBill - Coming soon
+  - payBill - Coming soon
+- Page (Payment Link)
+  - createPage - Coming soon
+  - getBill - Coming soon
+  - payBill - Coming soon
 
 Method to Initiation Sending or Receiving from mobile Money.
 
@@ -95,7 +106,8 @@ cross_switch.payment.Collection({
 	order_id: `${Math.ceil(Math.random() * 10e8)}`,
 	order_desc: 'Testing',
 	account: '',
-	callback: ''
+	customerid: '',
+	callback: '',
 }).then((body)=> {
 	console.log(body);
 }).catch((error)=> {
@@ -103,7 +115,7 @@ cross_switch.payment.Collection({
 });;
 ```
 
-Method to Initiation Only Receiving from mobile Money.
+Method to Initiation Only Sending to mobile Money.
 
 ```js
 cross_switch.payment.Cashout({
@@ -115,6 +127,8 @@ cross_switch.payment.Cashout({
 	amount: 1,
 	order_id: `${Math.ceil(Math.random() * 10e8)}`,
 	order_desc: 'Testing',
+	customerid: '',
+	callback: '',
 }).then((body)=> {
 	console.log(body);
 }).catch((error)=> {
@@ -151,5 +165,4 @@ cross_switch.payment.verifyPayment({
 
 - Add MOMO Number Verification
 - Add MOMO Direct Debit
-- Sms
 
