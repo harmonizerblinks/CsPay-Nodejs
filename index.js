@@ -1,6 +1,6 @@
 /*
-Paystack API wrapper
-@author Obembe Opeyemi <@kehers>
+Cross Switch Ghana API wrapper
+@author Harmony Alabi <@harmonizerblinks>
 */
 
 'use strict';
@@ -14,15 +14,17 @@ var
 
 var resources = {
   sms: require('./resources/sms'),
+  bill: require('./resources/bill'),
   payment: require('./resources/payment'),
   customer: require('./resources/customer'),
-}
+};
 
-function Cross_Switch(app_id,app_key,live=false) {
+function Cross_Switch(app_id,app_key,live=false,url=null) {
   if (!(this instanceof Cross_Switch)) {
     return new Cross_Switch(app_id,app_key);
   }
   if(live) root = 'https://app.alias-solutions.net:5002';
+  if(url) root = url;
   
   // console.log(app_id,app_key,root);
 
@@ -33,9 +35,10 @@ function Cross_Switch(app_id,app_key,live=false) {
 
 Cross_Switch.prototype = {
 
-  extend:  function(params) {
+  extend: function(params) {
   	// This looks more sane.
     var self = this;
+    console.log(self);
     return function(){
       // Convert argument to array
       var args = new Array(arguments.length);
@@ -60,7 +63,7 @@ Cross_Switch.prototype = {
 
         // Pull body passed
         var body = args.length === 2 ? args[1] : args[0];
-        paramList.filter(function(item, index, array) {
+        paramList.filter((item, index, array)=> {
           if(item.indexOf("*") === -1) {
             // Not required
             return;
@@ -131,6 +134,7 @@ Cross_Switch.prototype = {
         json: true,
         method: method.toUpperCase(),
         headers: {
+          'Accept': ['Bearer '],
           'Authorization': ['Bearer ', self.key].join('')
         }
       }
@@ -143,8 +147,8 @@ Cross_Switch.prototype = {
 
         // console.log(body, qs);
 
-      return new Promise(function (fulfill, reject){
-        request(options, function(error, response, body) {
+      return new Promise((fulfill, reject)=>{
+        request(options, (error, response, body)=> {
           // return body
           if (error){
             reject(error);
@@ -160,12 +164,12 @@ Cross_Switch.prototype = {
             fulfill(body);
           }
         });
-      }).then(function(value) {
+      }).then((value)=> {
       	if(callback) {
       		return callback(null, value);
       	}
       	return value;
-      }).catch(function(reason) {
+      }).catch((reason)=> {
       	if(callback) {
       		return callback(reason, null);
       	}
@@ -182,6 +186,7 @@ Cross_Switch.prototype = {
       anon = function(){};
       // Looping over the properties of each resource
       for(var i in resources[j]) {
+        // console.log(i);
         anon.prototype[i] = this.extend(resources[j][i]);
       }
       Cross_Switch.prototype[j] = new anon();

@@ -22,4 +22,14 @@ module.exports = {
     params: ['mobile*']
   },
 
+  /*
+  Get Customer Bill 
+  */
+  getBill: {
+    method: 'post',
+    endpoint: [root, '/GetCustomerBills'].join(''),
+    params: ['mobile*','index']
+  },
+
+
 };

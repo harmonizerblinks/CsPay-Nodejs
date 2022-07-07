@@ -5,31 +5,31 @@ var root = '/Integration/v1';
 module.exports = {
 
   /*
-  Send Otp 
+  Create Bill 
   */
-  sendOtp: {
+  createBill: {
     method: 'post',
-    endpoint: [root, '/SendOtp'].join(''),
-    params: ['mobile*','length*','type']
+    endpoint: [root, '/CreateCustomerBill'].join(''),
+    params: ['type*','number','name*','mobile*','currency*','email*','amount*','description*','frequency','expiry']
   },
 
   /*
-  Verify Otp 
+  Get Bill 
   */
-  verifyOtp: {
+  getBill: {
     method: 'post',
-    endpoint: [root, '/VerifyOtp'].join(''),
-    params: ['mobile*','otp*']
+    endpoint: [root, '/GetCustomerBills'].join(''),
+    params: ['mobile*','index']
   },
 
 
   /*
-  Send Sms 
+  Pay Bill 
   */
-  sendSms: {
+  payBill: {
     method: 'post',
-    endpoint: [root, '/SendSms'].join(''),
-    params: ['mobile*','message*']
+    endpoint: [root, '/PayCustomerBill'].join(''),
+    params: ['bill_code*','mobile*', 'network*', 'amount*', 'callback']
   },
 
 };

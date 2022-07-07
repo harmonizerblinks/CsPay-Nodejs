@@ -56,15 +56,15 @@ For all resource methods, the JSON body can be passed as the argument.
 - customer
   - createCustomer
   - getCustomer
-  - getCustomerBill - Coming soon
+  - getCustomerBill
 - sms 
   - sendSms
   - sendOtp
   - verifyOtp
 - Bill 
-  - createBill - Coming soon
-  - getBill - Coming soon
-  - payBill - Coming soon
+  - createBill
+  - getBill
+  - payBill
 - Page (Payment Link)
   - createPage - Coming soon
   - getBill - Coming soon
