@@ -21,10 +21,10 @@ var resources = {
 
 function Cross_Switch(app_id,app_key,live=false,url=null) {
   if (!(this instanceof Cross_Switch)) {
-    return new Cross_Switch(app_id,app_key);
+    return new Cross_Switch(app_id,app_key,live,url);
   }
   if(live) root = 'https://app.alias-solutions.net:5002';
-  if(url) root = url;
+  if(url != null) root = url;
   
   // console.log(app_id,app_key,root);
 
@@ -38,7 +38,7 @@ Cross_Switch.prototype = {
   extend: function(params) {
   	// This looks more sane.
     var self = this;
-    console.log(self);
+    // console.log(self);
     return function(){
       // Convert argument to array
       var args = new Array(arguments.length);

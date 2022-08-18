@@ -11,7 +11,6 @@ Nodejs API wrapper for [Cross-Switch Ghana](https://docs.cross-switch.app).
 ```
 npm install cross-switch-gh
 ```
-
 ### Usaged
 
 ```js
@@ -24,9 +23,7 @@ if (process.env.NODE_ENV === 'production') {
 // Require the library
 var cross_switch = require('cross-switch-gh')(process.env.APP_ID, process.env.APP_KEY, live);
 
-
 ```
-
 #### Making calls to the resources
 The resource methods accepts are promisified, but can receive optional callback as the last argument.
 
@@ -40,8 +37,6 @@ cross_switch.payment.createPayment({})
 		console.log(error);
 	});
 ```
-
-
 
 For all resource methods, the JSON body can be passed as the argument.
 
