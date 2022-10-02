@@ -62,8 +62,12 @@ For all resource methods, the JSON body can be passed as the argument.
   - payBill
 - Page (Payment Link)
   - createPage - Coming soon
-  - getBill - Coming soon
-  - payBill - Coming soon
+  - getPage - Coming soon
+  - Payment - Coming soon
+- Invoice (Payment Link)
+  - createInvoice - Coming soon
+  - getInvoice - Coming soon
+  - PayInvoice - Coming soon
 
 Method to Initiation Sending or Receiving from mobile Money.
 
