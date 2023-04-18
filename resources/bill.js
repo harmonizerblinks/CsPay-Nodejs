@@ -10,7 +10,7 @@ module.exports = {
   createBill: {
     method: 'post',
     endpoint: [root, '/CreateCustomerBill'].join(''),
-    params: ['type*','number','name*','mobile*','currency*','email*','amount*','description*','frequency','expiry']
+    params: ['type','number','name*','mobile*','currency*','email*','amount*','description*','frequency','expiry']
   },
 
   /*

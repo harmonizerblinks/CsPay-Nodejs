@@ -35,7 +35,7 @@ function Cross_Switch(app_id,app_key,live=false,url=null) {
 
 Cross_Switch.prototype = {
 
-  extend: function(params) {
+  extend: async function(params) {
   	// This looks more sane.
     var self = this;
     // console.log(self);
@@ -63,7 +63,7 @@ Cross_Switch.prototype = {
 
         // Pull body passed
         var body = args.length === 2 ? args[1] : args[0];
-        paramList.filter((item, index, array)=> {
+        await paramList.filter(async(item, index, array)=> {
           if(item.indexOf("*") === -1) {
             // Not required
             return;

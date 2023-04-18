@@ -1,6 +1,6 @@
 {
   "name": "cross-switch-gh",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cross-Switch Ghana API wrapper",
   "main": "index.js",
   "scripts": {

@@ -33,6 +33,23 @@ module.exports = {
     params: ['name*','email*','mobile*', 'mobile_network*', 'amount*', 'currency*', 'order_id*', 'order_desc', 'customerid', 'signature', 'callback']
   },
 
+   /*
+  Create Checkout 
+  */
+  CreateCheckout: {
+    method: 'post',
+    endpoint: [root, '/CreateCheckout'].join(''),
+    params: ['options','name*','email*','mobile*','amount*','currency*','order_id*','order_desc*','customerid','redirecturl','callbackurl']
+  },
+
+   /*
+  Get Trans Charge
+  */
+  GetTransCharge: {
+    method: 'post',
+    endpoint: [root, '/GetTransCharge'].join(''),
+    params: ['type*','amount*']
+  },
 
   /*
   Balance Enquiry
