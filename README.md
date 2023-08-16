@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
 	live = true;
 }
 // Require the library
-var cross_switch = require('cross-switch-gh')(process.env.APP_ID, process.env.APP_KEY, live);
+var cross_switch = require('cross-switch-gh')(process.env.APP_ID, process.env.APP_KEY, live, baseurl);
 
 ```
 #### Making calls to the resources

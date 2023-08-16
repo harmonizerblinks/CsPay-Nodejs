@@ -39,7 +39,7 @@ Cross_Switch.prototype = {
   	// This looks more sane.
     var self = this;
     // console.log(self);
-    return function(){
+    return async function(){
       // Convert argument to array
       var args = new Array(arguments.length);
       var l = args.length;
